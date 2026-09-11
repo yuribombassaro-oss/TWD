@@ -11,8 +11,8 @@ programa
         escreva("O que voce quer fazer?\n")
         escreva("1 - Pegar uma arma\n")
         escreva("2 - Fugir\n")
-        escreva("3 - Se esconder\n\n")
-
+        escreva("3 - Se esconder\n")
+        escreva("4 - Procurar comida\n\n")
         escreva("Digite sua opcao: ")
         leia(opcao)
 
@@ -39,7 +39,15 @@ programa
                     escreva("Os zumbis foram embora.\n")
                     escreva("VOCE SOBREVIVEU!")
                 }
+              senao
+              se (opcao == 4)
+              {
+              escreva("\nVoce encontrou comida!\n")
+              escreva("VOCE SOBREVIVEU!")
+              }
                 senao
+              
+
                 {
                     escreva("\nOpcao invalida!")
                 }
@@ -47,5 +55,3 @@ programa
         }
     }
 }
-
-
