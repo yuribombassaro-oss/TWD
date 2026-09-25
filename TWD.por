@@ -3,10 +3,12 @@ programa
     funcao inicio()
     {
         inteiro opcao
+          inteiro vida = 100
 
         escreva("THE WALKING DEAD\n")
         escreva("=================\n")
         escreva("Voce esta cercado por zumbis!\n\n")
+        escreva("Voce tem 100 de vida.\n\n")
 
         escreva("O que voce quer fazer?\n")
         escreva("1 - Pegar uma arma\n")
@@ -21,6 +23,10 @@ programa
             escreva("\nVoce pegou uma arma!\n")
             escreva("Um zumbi apareceu!\n")
             escreva("Voce derrotou o zumbi!\n")
+            vida = vida - 10
+
+            escreva("Voce perdeu 10 de vida.\n")
+            escreva("Sua vida agora e: ", vida, "\n")
             escreva("VOCE SOBREVIVEU!")
         }
         senao
@@ -29,6 +35,9 @@ programa
             {
                 escreva("\nVoce tentou fugir!\n")
                 escreva("Mas havia muitos zumbis!\n")
+                vida = vida - 100
+
+                escreva("Voce perdeu toda sua vida!\n")
                 escreva("VOCE MORREU!")
             }
             senao
@@ -43,6 +52,11 @@ programa
               se (opcao == 4)
               {
               escreva("\nVoce encontrou comida!\n")
+              escreva("A comida recuperou sua energia!\n")
+
+                        vida = vida + 20
+
+                        escreva("Sua vida agora e: ", vida, "\n")
               escreva("VOCE SOBREVIVEU!")
               }
                 senao
